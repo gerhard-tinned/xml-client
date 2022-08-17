@@ -4,14 +4,6 @@ The XML client is a very simple shell script implementation allowing to interact
 
 The script allows to define a XML template for each request available via the API. Additionally to the template, a configuration file allows to set parameters for the request. 
 
-## Requirements
-
-This script uses internally the following tools which must be installed. 
-
-* jq
-
-Besides the Linux core utilities, the script requires "jq" to be installed which is used to parse the json response from the API.
-
 
 ## Configuration
 
