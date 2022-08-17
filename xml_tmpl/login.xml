@@ -1,0 +1,10 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <login xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <struct>
+        <username>#USERNAME#</username>
+        <password>#PASSWORD#</password>
+      </struct>
+    </login>
+  </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,35 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <new_user xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <struct>
+        <nt_user_session>#NT_USER_SESSION#</nt_user_session>
+        <nt_group_id>#NT_GROUP_ID#</nt_group_id>
+        <first_name>#FIRST_NAME#</first_name>
+        <email>#EMAIL#</email>
+        <last_name>#LAST_NAME#</last_name>
+        <username>#USERNAME#</username>
+        <password>#PASSWORD#</password>
+        <password2>#PASSWORD#</password2>
+        <group_write>#GROUP_WRITE#</group_write>
+        <group_create>#GROUP_CREATE#</group_create>
+        <group_delete>#GROUP_DELETE#</group_delete>
+        <zone_write>#ZONE_WRITE#</zone_write>
+        <zone_create>#ZONE_CREATE#</zone_create>
+        <zone_delegate>#ZONE_DELEGATE#</zone_delegate>
+        <zone_delete>#ZONE_DELETE#</zone_delete>
+        <zonerecord_write>#ZONERECORD_WRITE#</zonerecord_write>
+        <zonerecord_create>#ZONERECORD_CREATE#</zonerecord_create>
+        <zonerecord_delegate>#ZONERECORD_DELEGATE#</zonerecord_delegate>
+        <zonerecord_delete>#ZONERECORD_DELETE#</zonerecord_delete>
+        <user_write>#USER_WRITE#</user_write>
+        <user_create>#USER_CREATE#</user_create>
+        <user_delete>#USER_DELETE#</user_delete>
+        <nameserver_write>#NAMESERVER_WRITE#</nameserver_write>
+        <nameserver_create>#NAMESERVER_CREATE#</nameserver_create>
+        <nameserver_delete>#NAMESERVER_DELETE#</nameserver_delete>
+        <self_write>#SELF_WRITE#</self_write>
+        <inherit_group_permissions>#INHERIT_GROUP_PERMISSIONS#"</inherit_group_permissions>
+      </struct>
+    </new_user>
+  </soap:Body>
+</soap:Envelope>

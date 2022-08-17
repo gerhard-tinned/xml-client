@@ -1,0 +1,10 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <delete_nameserver xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <struct>
+        <nt_user_session>#NT_USER_SESSION#</nt_user_session>
+        <nt_nameserver_id>#NT_NAMESERVER_ID#</nt_nameserver_id>
+      </struct>
+    </delete_nameserver>
+  </soap:Body>
+</soap:Envelope>

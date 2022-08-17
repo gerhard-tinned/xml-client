@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <new_nameserver xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <struct>
+        <nt_user_session>#NT_USER_SESSION#</nt_user_session>
+        <nt_nameserver_id>#NT_NAMESERVER_ID#</nt_nameserver_id>
+        <nt_group_id>#NT_GROUP_ID#</nt_group_id>
+        <datadir>#DATADIR#</datadir>
+        <description>#DESCRIPTION#</description>
+        <export_format>#EXPORT_FORMAT#</export_format>
+        <service_type>#SERVICE_TYPE#</service_type>
+        <logdir>#LOGDIR#</logdir>
+        <name>#NAME#</name>
+        <address>#ADDRESS#</address>
+        <ttl>#TTL#</ttl>
+      </struct>
+    </new_nameserver>
+  </soap:Body>
+</soap:Envelope>
