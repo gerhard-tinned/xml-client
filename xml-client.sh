@@ -182,17 +182,17 @@ sed ${FIELD_REPLACE} ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | egrep -v "#[A-Z_]+#"
 
 
 if [[ "${DEBUG}" == "1" ]]; then
-    echo "## REQUEST XML"
-    cat ${TMP_FILE} 
-    echo -e "\n"
+    debugout "## REQUEST XML"
+    cat ${TMP_FILE} >&2
+    debugout -e "\n"
 fi
 
 # Send XML request
 RESPONSE_RAW=$(curl  --header "Content-Type: text/xml;charset=UTF-8" --data @${TMP_FILE} ${XML_URL} 2>/dev/null)
 if [[ "${DEBUG}" == "1" ]]; then
-    echo "## RESPONSE_RAW"
-    echo "${RESPONSE_RAW}" | xmllint --format -
-    echo -e "\n"
+    debugout "## RESPONSE_RAW"
+    debugout "${RESPONSE_RAW}" | xmllint --format - >&2
+    debugout -e "\n"
 fi
 
 

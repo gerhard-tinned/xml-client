@@ -1,0 +1,17 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <new_zone_record xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <struct>
+        <nt_user_session>#NT_USER_SESSION#</nt_user_session>
+        <nt_zone_record_id>#NT_ZONE_RECORD_ID#</nt_zone_record_id>
+        <nt_zone_id>#NT_ZONE_ID#</nt_zone_id>
+        <name>#NAME#</name>
+        <ttl>#TTL#</ttl>
+        <description>#DESCRIPTION#</description>
+        <type>#TYPE#</type>
+        <address>#ADDRESS#</address>
+        <weight>#WEIGHT#</weight>
+      </struct>
+    </new_zone_record>
+  </soap:Body>
+</soap:Envelope>
