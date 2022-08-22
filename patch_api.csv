@@ -1,3 +1,4 @@
-API_REQUEST     ; NT_ZONE_ID    ; NAME          ; TYPE ; ADDRESS
-new_zone_record ; 590           ; test-a-001    ; A    ; 10.0.1.1
-new_zone_record ; 590           ; test-a-002    ; A    ; 10.0.1.2
+API_REQUEST     ; NT_ZONE_ID    ; NAME          		; TYPE 	; ADDRESS
+new_zone_record ; 590           ; test-a-001    		; A    	; 10.0.1.1
+new_zone_record ; 590           ; test-a-002    		; A    	; 10.0.1.2
+new_zone_record ; 590 			; cname-test-109-001 	; CNAME ; test-109-001
