@@ -1,0 +1,2 @@
+API_REQUEST     ; NT_ZONE_ID    ; NT_GROUP_ID   ; ZONE              ; NAMESERVERS   ; MAILADDR       ; DESCRIPTION  ;
+new_zone        ; ""            ; 1             ; aaa-api-test.none ; 4,5           ; test.zone.name ; Testing Zone ;
