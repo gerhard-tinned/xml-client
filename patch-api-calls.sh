@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-VERSION="0.1.2"
+VERSION="0.1.3"
 #
 
 ###############################################################################
@@ -147,7 +147,7 @@ for V in ${AUTH_VARS}; do
     VN="PAC_$V"
     VL="${VL} ${V} '${!VN}'"
 done
-debugout "${SCRIPT_CMD} ${DEBUG} -r ${AUTH_REQUEST} ${VL}"
+debugout "${SCRIPT_CMD} ${DEBUG_CMD} -r ${AUTH_REQUEST} ${VL}"
 if [[ "${LOG_PATH}" == "" ]]; then
     AUTH_TOKEN=$(echo ${SCRIPT_CMD} ${DEBUG_CMD} -r ${AUTH_REQUEST} ${VL} | bash)
 else
