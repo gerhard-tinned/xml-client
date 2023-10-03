@@ -1,0 +1,10 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <get_group_groups xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <struct>
+        <nt_user_session>#NT_USER_SESSION#</nt_user_session>
+	<nt_group_id>#NT_GROUP_ID#</nt_group_id>
+      </struct>
+    </get_group_groups>
+  </soap:Body>
+</soap:Envelope>
