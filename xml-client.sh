@@ -89,7 +89,7 @@ while [ $# -gt 0 ]; do
             if [[ ! -z "$2" ]] && [[ -f "${TEMPLATE_PATH}/$2.xml" ]]; then
                 REQUEST_NAME=$2
             else
-                echo "ERROR: Specified template '${TEMPLATE_PATH}/$2.json' or directory does not exist or is not a directory."
+                echo "ERROR: Specified template '${TEMPLATE_PATH}/$2.xml' or directory does not exist or is not a directory."
                 help_screen
                 exit 1
             fi
