@@ -1,0 +1,32 @@
+<soap:Envelope xmlns:apachens="http://xml.apache.org/xml-soap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <get_group_zones xmlns="http://127.0.0.1:8082/NicToolServer/SOAP">
+      <s-gensym21 xsi:type="apachens:Map">
+        <item><key xsi:type="xsd:string">nt_user_session</key><value xsi:type="xsd:string">#NT_USER_SESSION#</value></item>
+        <item><key xsi:type="xsd:string">include_subgroups</key><value xsi:type="xsd:string">#INCLUDE_SUBGROUPS#</value></item>
+        <item><key xsi:type="xsd:string">page</key><value xsi:type="xsd:string">#PAGE#</value></item>
+        <item><key xsi:type="xsd:string">start</key><value xsi:type="xsd:string">#START#</value></item>
+        <item><key xsi:type="xsd:string">limit</key><value xsi:type="xsd:string">#LIMIT#</value></item>
+        <item><key xsi:type="xsd:string">Sort</key><value xsi:type="xsd:string">#SORT#</value></item>
+        <item><key xsi:type="xsd:string">1_sortfield</key><value xsi:type="xsd:string">#1_SORTFIELD#</value></item>
+        <item><key xsi:type="xsd:string">1_sortmod</key><value xsi:type="xsd:string">#1_SORTMOD#</value></item>
+        <item><key xsi:type="xsd:string">search_query</key><value xsi:type="xsd:string">#SEARCH_QUERY#</value></item>
+        <item><key xsi:type="xsd:string">Search</key><value xsi:type="xsd:string">#SEARCH#</value></item>
+        <item><key xsi:type="xsd:string">1_field</key><value xsi:type="xsd:string">#1_FIELD#</value></item>
+        <item><key xsi:type="xsd:string">1_option</key><value xsi:type="xsd:string">#1_OPTION#</value></item>
+        <item><key xsi:type="xsd:string">1_value</key><value xsi:type="xsd:string">#1_VALUE#</value></item>
+        <item><key xsi:type="xsd:string">2_field</key><value xsi:type="xsd:string">#2_FIELD#</value></item>
+        <item><key xsi:type="xsd:string">2_option</key><value xsi:type="xsd:string">#2_OPTION#</value></item>
+        <item><key xsi:type="xsd:string">2_value</key><value xsi:type="xsd:string">#2_VALUE#</value></item>
+        <item><key xsi:type="xsd:string">2_inclusive</key><value xsi:type="xsd:string">#2_INCLUSIVE#</value></item>
+        <item><key xsi:type="xsd:string">3_field</key><value xsi:type="xsd:string">#3_FIELD#</value></item>
+        <item><key xsi:type="xsd:string">3_option</key><value xsi:type="xsd:string">#3_OPTION#</value></item>
+        <item><key xsi:type="xsd:string">3_value</key><value xsi:type="xsd:string">#3_VALUE#</value></item>
+        <item><key xsi:type="xsd:string">3_inclusive</key><value xsi:type="xsd:string">#3_INCLUSIVE#</value></item>
+        <item><key xsi:type="xsd:string">quick_search</key><value xsi:type="xsd:string">#QUICK_SEARCH#</value></item>
+        <item><key xsi:type="xsd:string">search_value</key><value xsi:type="xsd:string">#SEARCH_VALUE#</value></item>
+        <item><key xsi:type="xsd:string">nt_group_id</key><value xsi:type="xsd:string">#NT_GROUP_ID#</value></item>
+      </s-gensym21>
+    </get_group_zones>
+  </soap:Body>
+</soap:Envelope>

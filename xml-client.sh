@@ -185,13 +185,16 @@ if [[ "${DEBUG}" == "1" ]]; then
     debugout "## REQUEST XML"
     cat ${TMP_FILE} >&2
     debugout -e "\n"
+    DEBUG_OPTIONS=" -v "
+else
+    DEBUG_OPTIONS=""
 fi
 
 # Send XML request
-RESPONSE_RAW=$(curl  --header "Content-Type: text/xml;charset=UTF-8" --data @${TMP_FILE} ${XML_URL} 2>/dev/null)
+RESPONSE_RAW=$(curl -sS -k ${DEBUG_OPTIONS} --header "Content-Type: text/xml;charset=UTF-8" --data @${TMP_FILE} ${XML_URL} | xmllint --format -)
 if [[ "${DEBUG}" == "1" ]]; then
     debugout "## RESPONSE_RAW"
-    debugout "${RESPONSE_RAW}" | xmllint --format - >&2
+    debugout "${RESPONSE_RAW}"
     debugout -e "\n"
 fi
 
