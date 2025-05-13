@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-VERSION="0.1.3"
+VERSION="0.1.4"
 #
 
 #
@@ -103,7 +103,7 @@ while [ $# -gt 0 ]; do
 
         # VARIABLES        
         *)
-            if [[ "${1}" == "$(echo ${1} | egrep '^[A-Z_]+$')" ]] && [[ ! -z "$2" ]]; then
+            if [[ "${1}" == "$(echo ${1} | grep -E '^[A-Z_]+$')" ]] && [[ ! -z "$2" ]]; then
                 export XMLSV_${1}=${2}
                 shift 2
             else
@@ -135,7 +135,7 @@ fi
 #
 if [[ "${COMMAND}" == "LIST" ]]; then
     if [[ -f "${TEMPLATE_PATH}/${REQUEST_NAME}.xml" ]]; then
-        FIELDS=$(egrep '#[A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | sed -Ee 's/^.*#([A-Z_]+)#.*$/\1/')
+        FIELDS=$(grep -E '#[A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | sed -Ee 's/^.*#([A-Z_]+)#.*$/\1/')
         . ${TEMPLATE_PATH}/${REQUEST_NAME}.cfg
 
         echoout ""
@@ -160,7 +160,7 @@ fi
 
 # Reading files
 if [[ -f "${TEMPLATE_PATH}/${REQUEST_NAME}.xml" ]]; then
-    FIELDS=$(egrep '#[A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | sed -Ee 's/^.*#([A-Z_]+)#.*$/\1/')
+    FIELDS=$(grep -E '#[A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | sed -Ee 's/^.*#([A-Z_]+)#.*$/\1/')
     . ${TEMPLATE_PATH}/${REQUEST_NAME}.cfg
     TMP_FILE=$(umask 077 && mktemp /tmp/xml.XXXXXXXXXX)
 else 
@@ -178,7 +178,7 @@ for F in ${FIELDS}; do
 done
 
 # Replacing the variables with content ; Removing elements with NO variables value
-sed ${FIELD_REPLACE} ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | egrep -v "#[A-Z_]+#" >${TMP_FILE}
+sed ${FIELD_REPLACE} ${TEMPLATE_PATH}/${REQUEST_NAME}.xml | grep -E -v "#[A-Z_]+#" >${TMP_FILE}
 
 
 if [[ "${DEBUG}" == "1" ]]; then

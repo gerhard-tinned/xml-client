@@ -107,7 +107,7 @@ while [ $# -gt 0 ]; do
 
         # VARIABLES        
         *)
-            if [[ "${1}" == "$(echo ${1} | egrep '^[A-Z_]+$')" ]] && [[ ! -z "$2" ]]; then
+            if [[ "${1}" == "$(echo ${1} | grep -E '^[A-Z_]+$')" ]] && [[ ! -z "$2" ]]; then
                 export PAC_${1}="${2}"
                 shift 2
             else
